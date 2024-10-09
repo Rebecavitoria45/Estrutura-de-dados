@@ -1,4 +1,6 @@
-public class Lista implements IList{
+package ArrayList;
+
+public class Lista implements IList {
     private int[] array;
     private int size;
 
@@ -18,7 +20,7 @@ public class Lista implements IList{
 
     @Override
     public void add(int element) {
-        if(this.size>=array.length){
+        if(this.size==array.length){
          resize();
         }
       this.array[size]=element;
@@ -30,7 +32,7 @@ public class Lista implements IList{
         if(!(index>=0 && index<size)){
             throw new RuntimeException("invalid index");
         }
-        if(this.size>=array.length){
+        if(this.size==array.length){
             resize();
         }
         for(int i = this.size-1;i>=index;i--){

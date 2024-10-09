@@ -1,3 +1,5 @@
+package ArrayList;
+
 public interface IList {
     public int get(int index);
 
