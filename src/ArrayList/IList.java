@@ -17,4 +17,6 @@ public interface IList {
 
     //Obtém o tamanho da lista
     public int getSize();
+
+    public void print();
 }

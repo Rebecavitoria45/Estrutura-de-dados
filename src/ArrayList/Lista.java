@@ -67,6 +67,11 @@ public class Lista implements IList {
         return this.size;
     }
 
+    @Override
+    public void print() {
+
+    }
+
     private void resize(){
         int[] arraytemp = array;
         array = new int[arraytemp.length*2];
@@ -74,5 +79,17 @@ public class Lista implements IList {
         array[i] = arraytemp[i];
     }
     }
+
+    public int indexOf(int element){
+        int index = -1;
+        for(int i = 0 ; i<size;i++){
+            if(array[i]==element){
+              index = i;
+             break;
+            }
+        }
+        return index;
+    }
+
 
 }
