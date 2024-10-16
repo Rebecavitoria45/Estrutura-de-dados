@@ -40,7 +40,7 @@ public class ListaEncadeada implements IList{
           add(element);
       }
       else{
-          Node atual = getNode(index);
+          Node atual = getNode(index-1);
           Node newnode = new Node(element);
           newnode.next = atual.next;
           atual.next = newnode;
